@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 3
   tags:
   - Lader
+  - Flour
+  - eggs
+  - butter
+  - milk
+  - sugar
+  - Oven
   layers:
   - Default
   - TransparentFX
