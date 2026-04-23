@@ -28,8 +28,20 @@ public class ItemGrabber : MonoBehaviour
             SpawnPosition.x = 0f;
             SpawnedItem.transform.position = SpawnPosition;
             SpawnedItem.transform.SetParent(Player.transform, false);
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            PlayerHolder.setGrabbed();
+            if (gameObject.GetComponent<BoxCollider2D>() != null)
+            {
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                //PlayerHolder.grabbedItem = true;
+            }
+            else if (gameObject.GetComponent<CircleCollider2D>() != null)
+            {
+                gameObject.GetComponent<CircleCollider2D>().enabled = false;
+                //PlayerHolder.grabbedItem = true;
+            }
+            else
+            {
+                Debug.LogWarning("Collider is not found");
+            }
         }
     }
 }
