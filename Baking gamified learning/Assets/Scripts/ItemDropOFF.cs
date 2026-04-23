@@ -9,43 +9,47 @@ public class ItemDropOFF : MonoBehaviour
     public bool sugar = false;
     public bool grabbedItem = false;
     float timer = 0.5f;
+    private GameObject item;
+    public GameObject Flower_crate;
+    public GameObject Sugar_crate;
+    public GameObject Butter_crate;
+    public GameObject Milk_crate;
+    public GameObject Eggs_crate;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (grabbedItem == false)
         {
-            Debug.Log("grabbed da item");
             if (collision.gameObject.CompareTag("Flour"))
             {
-                Debug.Log("grabbedItem da flour");
                 flour = true;
+                item = collision.gameObject;
 
-                
             }
             else if (collision.gameObject.CompareTag("eggs"))
             {
                 eggs = true;
-
+                item = collision.gameObject;
 
             }
             else if (collision.gameObject.CompareTag("butter"))
             {
                 butter = true;
-
+                item = collision.gameObject;
 
             }
             else if (collision.gameObject.CompareTag("milk"))
             {
 
                 milk = true;
-
+                item = collision.gameObject;
 
             }
             else if (collision.gameObject.CompareTag("sugar"))
             {
                 sugar = true;
-
+                item = collision.gameObject;
 
             }
         }
@@ -70,30 +74,43 @@ public class ItemDropOFF : MonoBehaviour
             {
                 collision.gameObject.GetComponent<OvenScript>().eggs = true;
                 grabbedItem = false;
-                Destroy(gameObject);
+                Destroy(item);
+                eggs = false;
             }
             else if (flour == true)
             {
+                
                 collision.gameObject.GetComponent<OvenScript>().flour = true;
                 grabbedItem = false;
-                Destroy(gameObject);
+                Destroy(item);
+                flour = false;
             }
             else if (butter == true)
             {
                 collision.gameObject.GetComponent<OvenScript>().butter = true;
                 grabbedItem = false;
+                Destroy(item);
+                butter = false;
             }
             else if (milk == true)
             {
                 collision.gameObject.GetComponent<OvenScript>().milk = true;
                 grabbedItem = false;
+                Destroy(item);
+                milk = false;
             }
             else if (sugar == true)
             {
                 collision.gameObject.GetComponent<OvenScript>().sugar = true;
                 grabbedItem = false;
+                Destroy(item);
+                sugar = false;
             }
-        }       
+        }
 
+        //if (grabbedItem == false)
+        //{
+        //    gameObject.GetComponent<Crates>().spawneditem = false;
+        //}
     }
 }

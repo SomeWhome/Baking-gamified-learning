@@ -5,6 +5,7 @@ public class ItemGrabber : MonoBehaviour
     public GameObject SpawnedItem;
     public GameObject Player;
     private Vector2 SpawnPosition;
+ 
 
     private void Start()
     {
@@ -22,6 +23,7 @@ public class ItemGrabber : MonoBehaviour
         ItemDropOFF PlayerHolder = collision.gameObject.GetComponent<ItemDropOFF>();
         if (collision.gameObject.CompareTag("Player") && (PlayerHolder.grabbedItem == false))
         {
+
             SpawnPosition.y = 1f;
             SpawnPosition.x = 0f;
             SpawnedItem.transform.position = SpawnPosition;

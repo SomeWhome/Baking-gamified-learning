@@ -9,6 +9,8 @@ public class Crates : MonoBehaviour
     public Quaternion spawnedRotation = Quaternion.identity;
     public KeyCode activationKey = KeyCode.E;
     private bool entered =  false;
+    public bool spawneditem = false;
+    private GameObject crate;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,6 +22,7 @@ public class Crates : MonoBehaviour
     {
         if (gameObject != null)
         {
+            crate = gameObject;
             SpawnPosition = gameObject.transform.position;
 
             float x = SpawnPosition.x;
@@ -34,7 +37,11 @@ public class Crates : MonoBehaviour
 
         if (entered && Input.GetKeyDown(activationKey))
         {
-            Instantiate(spawnedObject, SpawnPosition, gameObject.transform.rotation);
+            if (spawneditem == false)
+            {
+                GameObject itemSpawned = Instantiate(spawnedObject, SpawnPosition, gameObject.transform.rotation);
+                spawneditem = true;
+            }
         }
     }
 

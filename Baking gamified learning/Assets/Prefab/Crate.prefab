@@ -101,10 +101,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd65999926f0ee34a8f9202ab66fe39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crate: {fileID: 8045178147160209440}
   spawnedObject: {fileID: 5841896310160292216, guid: 9e06cf5f57694f8488f2d70dd57ba61c, type: 3}
   spawnedRotation: {x: 0, y: 0, z: 0, w: 1}
   activationKey: 101
+  spawneditem: 0
 --- !u!61 &6765709954881577715
 BoxCollider2D:
   m_ObjectHideFlags: 0
