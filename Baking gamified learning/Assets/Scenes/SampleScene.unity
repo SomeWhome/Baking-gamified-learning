@@ -387,6 +387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4cb1fadbca6a44787ec4a71d68ff72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Score: {fileID: 1431441996}
+  Order: {fileID: 2058267699}
 --- !u!61 &395806458
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1476,6 +1478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b7cc1d3880d0e4e98a5db23025f656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 1431441998}
 --- !u!1 &1468082541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,7 +1572,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!114 &1468082544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1582,7 +1585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e84d2da7eac8f74bbdaff6b209828a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 20
+  m_speed: 17.67
   m_jumpPower: 185
   m_landed: 1
   m_jumped: 0
@@ -1674,6 +1677,7 @@ MonoBehaviour:
   milk: 0
   sugar: 0
   grabbedItem: 0
+  CAKE: 0
   Flower_crate: {fileID: 1139582277}
   Sugar_crate: {fileID: 1096571925}
   Butter_crate: {fileID: 1856656519}

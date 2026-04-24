@@ -8,6 +8,7 @@ public class ItemDropOFF : MonoBehaviour
     public bool milk = false;
     public bool sugar = false;
     public bool grabbedItem = false;
+    public bool CAKE = false;
     //float timer = 0.5f;
     private GameObject item;
     public GameObject Flower_crate;
@@ -15,6 +16,7 @@ public class ItemDropOFF : MonoBehaviour
     public GameObject Butter_crate;
     public GameObject Milk_crate;
     public GameObject Eggs_crate;
+
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -52,6 +54,10 @@ public class ItemDropOFF : MonoBehaviour
                 item = collision.gameObject;
                 grabbedItem = true;
             }
+            else if(collision.gameObject.CompareTag("Cake"))
+            {
+               CAKE = true;
+            }
 
             
         }
@@ -69,11 +75,9 @@ public class ItemDropOFF : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger enter");
         //check if its an oven
         if (collision.gameObject.CompareTag("Oven"))
         {
-            Debug.Log("oven enter");
             if (eggs == true)
             {
                 collision.gameObject.GetComponent<OvenScript>().eggs = true;
