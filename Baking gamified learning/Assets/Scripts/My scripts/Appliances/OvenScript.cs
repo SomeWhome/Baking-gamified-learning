@@ -1,6 +1,8 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements.Experimental;
+using Unity.Mathematics;
 
 public class OvenScript : MonoBehaviour
 {
@@ -15,6 +17,8 @@ public class OvenScript : MonoBehaviour
     public GameObject Cake;
     public GameObject oven;
     private Vector2 CakeSpawnPosition;
+    public Text Timer;
+    private float TimeLeft;
 
     private void Update()
     {
@@ -23,6 +27,8 @@ public class OvenScript : MonoBehaviour
             if (baking == true)
             {
                 timer -= Time.deltaTime;
+                TimeLeft = (float)math.round(timer);
+                Timer.text = "Oven Finished:" + TimeLeft.ToString();
             }
         }
         if (timer <= 0 )
