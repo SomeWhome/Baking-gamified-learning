@@ -8,7 +8,7 @@ public class ItemDropOFF : MonoBehaviour
     public bool milk = false;
     public bool sugar = false;
     public bool grabbedItem = false;
-    float timer = 0.5f;
+    //float timer = 0.5f;
     private GameObject item;
     public GameObject Flower_crate;
     public GameObject Sugar_crate;
