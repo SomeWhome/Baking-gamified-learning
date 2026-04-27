@@ -16,6 +16,11 @@ public class OrderManager : MonoBehaviour
     private float timer = 20f;
     private float timeleft;
     public Text OrderTimer;
+    public Text FlourTick;
+    public Text ButterTick;
+    public Text EggTick;
+    public Text MilkTick;
+    public Text SugarTick;
     private void Start()
     {
         ItemToBake = "Cake";
@@ -71,4 +76,6 @@ public class OrderManager : MonoBehaviour
         }
         return true;
     }
+
+    
 }

@@ -20,21 +20,25 @@ public class ScoreUpdater : MonoBehaviour
         {
             score = score + 100;
             scoreText.text = "score: " + score;
+            timeTaken = 0;
         }
         else if (timeTaken <= 80)
         {
             score = score + 50;
             scoreText.text = "score: " + score;
+            timeTaken = 0;
         }
         else if (timeTaken <= 120)
         {
             score = score + 25;
             scoreText.text = "score: " + score;
+            timeTaken = 0;
         }
         else if (timeTaken >=120)
         {
             score = score - 50;
             scoreText.text = "score: " + score;
+            timeTaken = 0;
         }
     }
 }

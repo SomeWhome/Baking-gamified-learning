@@ -27,7 +27,7 @@ public class Crates : MonoBehaviour
 
             float x = SpawnPosition.x;
             float y = SpawnPosition.y;
-            SpawnPosition.y += 0.1f;
+            SpawnPosition.y += 1.0f;
           
         }
         else
