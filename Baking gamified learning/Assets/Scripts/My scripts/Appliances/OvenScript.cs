@@ -19,6 +19,11 @@ public class OvenScript : MonoBehaviour
     private Vector2 CakeSpawnPosition;
     public Text Timer;
     private float TimeLeft;
+    public Text FlourTick;
+    public Text ButterTick;
+    public Text EggTick;
+    public Text MilkTick;
+    public Text SugarTick;
 
     private void Update()
     {
@@ -52,10 +57,15 @@ public class OvenScript : MonoBehaviour
     private void cook()
     {
         eggs = false;
+        EggTick.gameObject.SetActive(false);
         flour = false;
+        FlourTick.gameObject.SetActive(false);
         butter = false;
+        ButterTick.gameObject.SetActive(false);
         milk = false;
+        MilkTick.gameObject.SetActive(false);
         sugar = false;
+        SugarTick.gameObject.SetActive(false);
         baking = true;
     }
     private void BakedGoods()

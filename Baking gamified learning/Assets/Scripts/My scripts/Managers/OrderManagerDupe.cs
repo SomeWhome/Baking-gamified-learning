@@ -1,18 +1,17 @@
-using Mono.Cecil.Cil;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OrderManager : MonoBehaviour
+public class OrderManagerDupe : MonoBehaviour
 {
     //Vairables
     private int OrderCap = 5;
     private int OrderAmmount = 0;
     private string ItemToBake;
     private List<string> ItemList;
-    private string[] BakingList;
+    private string[] BakingList = {null, null, null, null, null };
     public List<Text> UIList;
     private float timer = 20f;
     private float timeleft;
@@ -20,13 +19,11 @@ public class OrderManager : MonoBehaviour
 
 
 
+
     private void Start()
     {
         ItemToBake = "Cake";
         Order();
-        BakingList[0] = "food";
-
-        Debug.Log("food");
     }
     private void Update()
     {
@@ -54,11 +51,12 @@ public class OrderManager : MonoBehaviour
         {
             if (ItemToBake == "Cake")
             {
-                OrderAmmount +=1;
+                OrderAmmount += 1;
                 earliestInList(ItemToBake);
                 for (int i = 0; i < BakingList.Length; i++)
                 {
-                    UIList[i].text = BakingList[i].ToString();
+                    if(BakingList[i] != null && BakingList[i] != "null")
+                        UIList[i].text = BakingList[i].ToString();
                 }
             }
         }
@@ -68,7 +66,7 @@ public class OrderManager : MonoBehaviour
     {
         for (int i = 0; i < OrderCap; i++)
         {
-            Debug.Log(BakingList[i]);
+
             if (BakingList[i] == null || BakingList[i] == "null")
             {
                 BakingList[i] = addition;
@@ -83,14 +81,15 @@ public class OrderManager : MonoBehaviour
     {
         for (int i = 0; i < OrderCap; i++)
         {
-            if (BakingList[i] == "Cake")
+            if (BakingList[4-i] == "Cake")
             {
-                BakingList[i] = "null";
+                OrderAmmount--;
+                BakingList[4-i] = "null";
+                UIList[4-i].text = "";
+                  
                 return true;
             }
         }
         return true;
     }
-
-    
 }

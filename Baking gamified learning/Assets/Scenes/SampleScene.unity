@@ -295,18 +295,19 @@ RectTransform:
   - {fileID: 1431441997}
   - {fileID: 1298153686}
   - {fileID: 1010108104}
+  - {fileID: 1376045996}
+  - {fileID: 95793623}
   - {fileID: 1868862317}
   - {fileID: 2137181757}
   - {fileID: 1573821140}
   - {fileID: 790768298}
   - {fileID: 886974235}
   - {fileID: 1480235386}
-  - {fileID: 95793623}
   - {fileID: 896386118}
-  - {fileID: 1742121691}
   - {fileID: 519219021}
-  - {fileID: 1639345153}
+  - {fileID: 1742121691}
   - {fileID: 1987060593}
+  - {fileID: 1639345153}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -549,6 +550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Score: {fileID: 1431441996}
   Order: {fileID: 2058267699}
+  Player: {fileID: 1468082541}
 --- !u!61 &395806458
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -703,7 +705,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &519219021
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1036,6 +1038,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5856558925902371916, guid: 14692318fb180c94196d66e9fe7ed6f8, type: 3}
   m_PrefabInstance: {fileID: 703989560}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &710659648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 710659649}
+  - component: {fileID: 710659650}
+  m_Layer: 0
+  m_Name: Square (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &710659649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710659648}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 20.846214, y: 15.868224, z: -0.024138726}
+  m_LocalScale: {x: 1, y: 40.690052, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2134808914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &710659650
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710659648}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!4 &766144957 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4665940199720400550, guid: 9ad4861ab0f1d8243b3b4ba0dcf43763, type: 3}
@@ -1053,6 +1133,7 @@ GameObject:
   - component: {fileID: 772233205}
   - component: {fileID: 772233204}
   - component: {fileID: 772233207}
+  - component: {fileID: 772233208}
   m_Layer: 0
   m_Name: Oven
   m_TagString: Oven
@@ -1067,7 +1148,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772233203}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b6d21686440adf41a5f5364cbfc3473, type: 3}
   m_Name: 
@@ -1082,6 +1163,11 @@ MonoBehaviour:
   Cake: {fileID: 5110942434824074204, guid: a035ec5ff66d06947a11af94f27f993b, type: 3}
   oven: {fileID: 772233203}
   Timer: {fileID: 1010108105}
+  FlourTick: {fileID: 896386120}
+  ButterTick: {fileID: 519219023}
+  EggTick: {fileID: 1742121693}
+  MilkTick: {fileID: 1987060595}
+  SugarTick: {fileID: 1639345151}
 --- !u!212 &772233205
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1198,6 +1284,24 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &772233208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772233203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a797093f655c14c9a9559f5ada4015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 15
+  TimerOver: 0
+  Cake: {fileID: 5110942434824074204, guid: a035ec5ff66d06947a11af94f27f993b, type: 3}
+  oven: {fileID: 772233203}
+  Timer: {fileID: 1010108105}
+  CakeBatter: 0
 --- !u!4 &781268939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5894179055415443092, guid: 836a0a469e4f10a4da028d5183dfc12b, type: 3}
@@ -1378,7 +1482,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &896386118
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1683,9 +1787,10 @@ GameObject:
   - component: {fileID: 1123097148}
   - component: {fileID: 1123097150}
   - component: {fileID: 1123097149}
+  - component: {fileID: 1123097151}
   m_Layer: 0
   m_Name: Mixer
-  m_TagString: Untagged
+  m_TagString: Mixer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1724,9 +1829,14 @@ MonoBehaviour:
   sugar: 0
   timer: 15
   TimerOver: 0
-  CakeMix: {fileID: 0}
-  Mixer: {fileID: 0}
-  Timer: {fileID: 0}
+  CakeMix: {fileID: 8235265946471460713, guid: a5e3bad9769b02a48a02976edcf07dfb, type: 3}
+  Mixer: {fileID: 1123097147}
+  TimerMixer: {fileID: 1376045997}
+  EggTick: {fileID: 1742121693}
+  FlourTick: {fileID: 896386120}
+  SugarTick: {fileID: 1639345151}
+  ButterTick: {fileID: 519219023}
+  MilkTick: {fileID: 1987060595}
 --- !u!212 &1123097150
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1782,6 +1892,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1123097151
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123097147}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1139582277 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8045178147160209440, guid: 14692318fb180c94196d66e9fe7ed6f8, type: 3}
@@ -2142,6 +2298,85 @@ Transform:
   - {fileID: 676901187}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1376045995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1376045996}
+  - component: {fileID: 1376045998}
+  - component: {fileID: 1376045997}
+  m_Layer: 5
+  m_Name: Mixer timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1376045996
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376045995}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 137385924}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 83.034, y: -130.71}
+  m_SizeDelta: {x: 298.44, y: 69.134}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1376045997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376045995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Timer till batter is mixed:'
+--- !u!222 &1376045998
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376045995}
+  m_CullTransparentMesh: 1
 --- !u!1 &1431441996
 GameObject:
   m_ObjectHideFlags: 0
@@ -2344,7 +2579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 12.5
-  m_jumpPower: 250
+  m_jumpPower: 275
   m_landed: 1
   m_jumped: 0
 --- !u!212 &1468082545
@@ -2436,11 +2671,18 @@ MonoBehaviour:
   sugar: 0
   grabbedItem: 0
   CAKE: 0
+  Cakebatter: 0
   Flower_crate: {fileID: 1139582277}
   Sugar_crate: {fileID: 1096571925}
   Butter_crate: {fileID: 1856656519}
   Milk_crate: {fileID: 2008273579}
   Eggs_crate: {fileID: 1588298552}
+  mixer: {fileID: 1123097147}
+  FlourTick: {fileID: 896386120}
+  ButterTick: {fileID: 519219023}
+  EggTick: {fileID: 1742121693}
+  MilkTick: {fileID: 1987060595}
+  SugarTick: {fileID: 1639345151}
 --- !u!1 &1480235383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,7 +2932,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1639345151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3039,7 +3281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1742121691
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3725,6 +3967,84 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2134808914}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1910630369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1910630370}
+  - component: {fileID: 1910630371}
+  m_Layer: 0
+  m_Name: Square
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1910630370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910630369}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -23.043787, y: 15.868224, z: -0.024138726}
+  m_LocalScale: {x: 1, y: 40.690052, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2134808914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1910630371
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910630369}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1932065581
 GameObject:
   m_ObjectHideFlags: 0
@@ -3963,7 +4283,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1987060593
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4040,6 +4360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2058267701}
   - component: {fileID: 2058267700}
+  - component: {fileID: 2058267702}
   m_Layer: 0
   m_Name: Order manager
   m_TagString: Untagged
@@ -4054,7 +4375,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058267699}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abe4b951b093c01419a2580a4186e3be, type: 3}
   m_Name: 
@@ -4066,11 +4387,6 @@ MonoBehaviour:
   - {fileID: 886974237}
   - {fileID: 1480235384}
   OrderTimer: {fileID: 95793624}
-  FlourTick: {fileID: 896386120}
-  ButterTick: {fileID: 519219023}
-  EggTick: {fileID: 1742121693}
-  MilkTick: {fileID: 1987060595}
-  SugarTick: {fileID: 1639345151}
 --- !u!4 &2058267701
 Transform:
   m_ObjectHideFlags: 0
@@ -4086,6 +4402,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2058267702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058267699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb9f75f14b2fd1409565a9776c4c5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIList:
+  - {fileID: 2137181755}
+  - {fileID: 1573821142}
+  - {fileID: 790768300}
+  - {fileID: 886974237}
+  - {fileID: 1480235384}
+  OrderTimer: {fileID: 95793624}
 --- !u!1001 &2107843255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4192,6 +4527,8 @@ Transform:
   - {fileID: 1280999689}
   - {fileID: 1718846528}
   - {fileID: 1773402613}
+  - {fileID: 1910630370}
+  - {fileID: 710659649}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2137181754

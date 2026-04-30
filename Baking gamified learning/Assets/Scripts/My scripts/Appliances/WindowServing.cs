@@ -5,6 +5,7 @@ public class WindowServing : MonoBehaviour
 {
     public GameObject Score;
     public GameObject Order;
+    public GameObject Player;
 
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -17,7 +18,9 @@ public class WindowServing : MonoBehaviour
             //cake consummed
             Destroy(GameObject.Find("Cake(Clone)"));
             //order deleted
-            Order.GetComponent<OrderManager>().CompleteOrder();
+            Order.GetComponent<OrderManagerDupe>().CompleteOrder();
+            Player.GetComponent<ItemDropOFF>().CAKE = false;
+            Player.GetComponent<ItemDropOFF>().grabbedItem = false;
         }
     }
 }

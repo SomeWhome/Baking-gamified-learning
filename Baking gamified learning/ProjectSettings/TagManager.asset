@@ -12,6 +12,8 @@ TagManager:
   - sugar
   - Oven
   - Cake
+  - CakeBatter
+  - Mixer
   layers:
   - Default
   - TransparentFX

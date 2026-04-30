@@ -15,8 +15,13 @@ public class MixerScript : MonoBehaviour
     public GameObject CakeMix;
     public GameObject Mixer;
     private Vector2 CakeMixSpawnPosition;
-    public Text Timer;
+    public Text TimerMixer;
     private float TimeLeft;
+    public Text EggTick;
+    public Text FlourTick;
+    public Text SugarTick;
+    public Text ButterTick;
+    public Text MilkTick;   
 
     private void Update()
     {
@@ -26,7 +31,7 @@ public class MixerScript : MonoBehaviour
             {
                 timer -= Time.deltaTime;
                 TimeLeft = (float)math.round(timer);
-                Timer.text = "Oven Finished:" + TimeLeft.ToString();
+                TimerMixer.text = "Timer till batter is mixed:" + TimeLeft.ToString();
             }
         }
         if (timer <= 0)
@@ -67,5 +72,10 @@ public class MixerScript : MonoBehaviour
         Instantiate(CakeMix, CakeMixSpawnPosition, gameObject.transform.rotation);
         baking = false;
         timer = 15f;
+        EggTick.gameObject.SetActive(false);
+        FlourTick.gameObject.SetActive(false);
+        ButterTick.gameObject.SetActive(false);
+        MilkTick.gameObject.SetActive(false);
+        SugarTick.gameObject.SetActive(false);
     }
 }
