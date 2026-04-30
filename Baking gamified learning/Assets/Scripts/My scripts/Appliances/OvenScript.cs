@@ -28,7 +28,7 @@ public class OvenScript : MonoBehaviour
             {
                 timer -= Time.deltaTime;
                 TimeLeft = (float)math.round(timer);
-                Timer.text = "Oven Finished:" + TimeLeft.ToString();
+                Timer.text = "Timer till Cake baked:" + TimeLeft.ToString();
             }
         }
         if (timer <= 0 )
