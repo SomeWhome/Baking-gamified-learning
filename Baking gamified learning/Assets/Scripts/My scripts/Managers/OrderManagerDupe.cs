@@ -13,9 +13,10 @@ public class OrderManagerDupe : MonoBehaviour
     private List<string> ItemList;
     private string[] BakingList = {null, null, null, null, null };
     public List<Text> UIList;
-    private float timer = 20f;
+    private float timer = 40f;
     private float timeleft;
     public Text OrderTimer;
+    public static int OrderCount;
 
 
 
@@ -41,7 +42,7 @@ public class OrderManagerDupe : MonoBehaviour
         }
         else
         {
-            timer = 20f;
+            timer = 40f;
             Order();
         }
     }
@@ -51,6 +52,7 @@ public class OrderManagerDupe : MonoBehaviour
         {
             if (ItemToBake == "Cake")
             {
+                OrderCount += 1;
                 OrderAmmount += 1;
                 earliestInList(ItemToBake);
                 for (int i = 0; i < BakingList.Length; i++)
@@ -83,6 +85,7 @@ public class OrderManagerDupe : MonoBehaviour
         {
             if (BakingList[4-i] == "Cake")
             {
+                OrderCount --;
                 OrderAmmount--;
                 BakingList[4-i] = "null";
                 UIList[4-i].text = "";

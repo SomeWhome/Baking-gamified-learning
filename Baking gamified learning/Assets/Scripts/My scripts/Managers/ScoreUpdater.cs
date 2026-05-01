@@ -6,12 +6,16 @@ public class ScoreUpdater : MonoBehaviour
     public static int score = 0;
     public static float timeTaken = 0;
     public Text scoreText;
+    public static int OrderCount = 0;
 
     private void Update()
     {
-        if (timeTaken <= 121)
+        if (OrderCount > 0 && OrderCount <= 5)
         {
-           timeTaken += Time.deltaTime; 
+            if (timeTaken <= 121)
+            {
+                timeTaken += Time.deltaTime;
+            }
         }
     }
     public void ScoreUpdate()
@@ -41,4 +45,5 @@ public class ScoreUpdater : MonoBehaviour
             timeTaken = 0;
         }
     }
+
 }
