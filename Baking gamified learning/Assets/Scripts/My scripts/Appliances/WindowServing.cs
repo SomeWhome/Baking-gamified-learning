@@ -16,7 +16,7 @@ public class WindowServing : MonoBehaviour
             Score.GetComponent<ScoreUpdater>().ScoreUpdate();
             //Gets Cake as Game Object
             //cake consummed
-            Destroy(GameObject.Find("Cake(Clone)"));
+            Destroy(GameObject.Find("Chocolate Glazzed Cake(Clone)"));
             //order deleted
             Order.GetComponent<OrderManagerDupe>().CompleteOrder();
             Player.GetComponent<ItemDropOFF>().CAKE = false;
