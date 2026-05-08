@@ -1727,7 +1727,7 @@ PrefabInstance:
     - target: {fileID: 8890690558531719017, guid: 14692318fb180c94196d66e9fe7ed6f8, type: 3}
       propertyPath: spawnedObject
       value: 
-      objectReference: {fileID: 8979062025681336902, guid: 836a0a469e4f10a4da028d5183dfc12b, type: 3}
+      objectReference: {fileID: 672213016756041342, guid: d339e547f4ff82947a6ddac7b8a4d449, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2811,7 +2811,7 @@ PrefabInstance:
     - target: {fileID: 8890690558531719017, guid: 14692318fb180c94196d66e9fe7ed6f8, type: 3}
       propertyPath: spawnedObject
       value: 
-      objectReference: {fileID: 5396980211645543185, guid: cde254193707dbb4ba952014cac4e695, type: 3}
+      objectReference: {fileID: 8082305643637126755, guid: a9eabac6a17968d4cbee808bb3cc18f2, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3747,7 +3747,7 @@ PrefabInstance:
     - target: {fileID: 8890690558531719017, guid: 14692318fb180c94196d66e9fe7ed6f8, type: 3}
       propertyPath: spawnedObject
       value: 
-      objectReference: {fileID: 420514741863924248, guid: d719951ece078b94f9ee74e32173ffde, type: 3}
+      objectReference: {fileID: 7631454281266392583, guid: 8224a67ed995101448af2a2832397d42, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4692,6 +4692,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate (Flour)
       objectReference: {fileID: 0}
+    - target: {fileID: 8890690558531719017, guid: 14692318fb180c94196d66e9fe7ed6f8, type: 3}
+      propertyPath: spawnedObject
+      value: 
+      objectReference: {fileID: 3710306617659238664, guid: faccda8ca337dbe4fbb0696bb5e0fbb0, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
