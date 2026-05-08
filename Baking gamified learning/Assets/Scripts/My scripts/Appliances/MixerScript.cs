@@ -71,7 +71,7 @@ public class MixerScript : MonoBehaviour
         CakeMixSpawnPosition.y += 1f;
         Instantiate(CakeMix, CakeMixSpawnPosition, gameObject.transform.rotation);
         baking = false;
-        timer = 15f;
+        timer = 10f;
         EggTick.gameObject.SetActive(false);
         FlourTick.gameObject.SetActive(false);
         ButterTick.gameObject.SetActive(false);
